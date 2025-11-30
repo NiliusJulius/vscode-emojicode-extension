@@ -6,8 +6,12 @@
   },
   "else": {
     "prefix": "else",
-    "body": ["🙅 $1 🍇", "\t$0", "🍉"],
+    "body": ["🙅 🍇", "\t$0", "🍉"],
     "description": "Else statement"
+  },
+  "else-if": {
+    "prefix": "elseif",
+    "body": ["🙅↪️ $1 🍇", "\t$0", "🍉"]
   },
   "for-in": {
     "prefix": "for-in",
@@ -19,18 +23,292 @@
     "body": ["🔁 ${1:👍} 🍇", "\t$0", "🍉"],
     "description": "Repeat while"
   },
-  "Print string": {
-    "prefix": "printstr",
-    "body": "😀🔤$1🔤❗️",
-    "description": "Print string literal"
+  "block": {
+    "prefix": "block",
+    "body": "🍇$0🍉"
   },
-  "Print": {
+  "print": {
     "prefix": "print",
-    "body": "😀$1❗️",
-    "description": "Print string literal"
+    "body": "😀 $1 ❗️"
   },
-  "Main block": {
+  "main-block": {
     "prefix": "main",
     "body": ["🏁🍇", "\t$0", "🍉"]
+  },
+  "protocol": {
+    "prefix": ["protocol", "interface"],
+    "body": ["🐊 $1 🍇", "\t$0", "🍉"]
+  },
+  "class": {
+    "prefix": "class",
+    "body": ["🐇 $1 🍇", "\t$0", "🍉"]
+  },
+  "value-type": {
+    "prefix": "valuetype",
+    "body": ["🕊 $1 🍇", "\t$0", "🍉"]
+  },
+  "initializer": {
+    "prefix": ["initializer", "constructor"],
+    "body": ["🆕 $1 🍇", "\t$0", "🍉"]
+  },
+  "initializer-short": {
+    "prefix": ["initializershort", "constructorshort"],
+    "body": "🆕 🍼 $1 🍇🍉"
+  },
+  "required": {
+    "prefix": "required",
+    "body": "🔑"
+  },
+  "override": {
+    "prefix": "override",
+    "body": "✒️"
+  },
+  "super": {
+    "prefix": "super",
+    "body": "⤴️🆕 $0❗️"
+  },
+  "method": {
+    "prefix": "method",
+    "body": ["❗️ $1 🍇", "\t$0", "🍉"]
+  },
+  "static-method": {
+    "prefix": "staticmethod",
+    "body": ["🐇❗️ $1 ➡️ $2 🍇", "\t$0", "🍉"]
+  },
+  "static-call": {
+    "prefix": "staticcall",
+    "body": "$1🐇$0❗️"
+  },
+  "string": {
+    "prefix": "string",
+    "body": "🔡"
+  },
+  "text": {
+    "prefix": "text",
+    "body": "🔤$1🔤"
+  },
+  "escape": {
+    "prefix": "escape",
+    "body": "❌"
+  },
+  "interpolate-string": {
+    "prefix": "interpolatestring",
+    "body": "🧲 $0 🧲"
+  },
+  "integer": {
+    "prefix": "integer",
+    "body": "🔢"
+  },
+  "real": {
+    "prefix": "real",
+    "body": "💯"
+  },
+  "byte": {
+    "prefix": "byte",
+    "body": "💧"
+  },
+  "boolean": {
+    "prefix": "boolean",
+    "body": "👌"
+  },
+  "true": {
+    "prefix": "true",
+    "body": "👍"
+  },
+  "false": {
+    "prefix": "false",
+    "body": "👎"
+  },
+  "collection": {
+    "prefix": "collection",
+    "body": "🍿 $0 🍆"
+  },
+  "collection-get": {
+    "prefix": "collectionget",
+    "body": "🐽"
+  },
+  "list": {
+    "prefix": "list",
+    "body": "🍿 $0 🍆"
+  },
+  "dictionary": {
+    "prefix": "dictionary",
+    "body": "🍿 $1 ➡️ $0 🍆"
+  },
+  "range": {
+    "prefix": "range",
+    "body": "🆕⏩ $1 $2 $0❗️"
+  },
+  "return": {
+    "prefix": "return",
+    "body": "↩️ $0"
+  },
+  "include": {
+    "prefix": "include",
+    "body": "📜 🔤$0🔤"
+  },
+  "assign": {
+    "prefix": ["assign", "returntype"],
+    "body": "➡️"
+  },
+  "mutable": {
+    "prefix": "mutable",
+    "body": "🖍🆕 $0"
+  },
+  "edit": {
+    "prefix": "edit",
+    "body": "🖍 $0"
+  },
+  "operator-assignment": {
+    "prefix": "operatorassignment",
+    "body": "⬅️$1 $0"
+  },
+  "new": {
+    "prefix": "new",
+    "body": "🆕"
+  },
+  "new-value-type": {
+    "prefix": "newinstance",
+    "body": "🆕$1 $2❗️ ➡️ $0"
+  },
+  "imperative": {
+    "prefix": "imperative",
+    "body": "❗️"
+  },
+  "interrogative": {
+    "prefix": "interrogative",
+    "body": "❓"
+  },
+  "this": {
+    "prefix": "this",
+    "body": "👇"
+  },
+  "getter": {
+    "prefix": "getter",
+    "body": ["❗️ $1 ➡️ $2 🍇", "\t↩️ $0", "🍉"]
+  },
+  "public": {
+    "prefix": "public",
+    "body": "🔓"
+  },
+  "private": {
+    "prefix": "private",
+    "body": "🔐"
+  },
+  "package-private": {
+    "prefix": "packageprivate",
+    "body": "🔒"
+  },
+  "plus": {
+    "prefix": "plus",
+    "body": "➕"
+  },
+  "minus": {
+    "prefix": "minus",
+    "body": "➖"
+  },
+  "divide": {
+    "prefix": "divide",
+    "body": "➗"
+  },
+  "multiply": {
+    "prefix": "multiply",
+    "body": "✖️"
+  },
+  "modulus": {
+    "prefix": "modulus",
+    "body": "🚮"
+  },
+  "group-left": {
+    "prefix": "groupleft",
+    "body": "🤜"
+  },
+  "group-right": {
+    "prefix": "groupright",
+    "body": "🤛"
+  },
+  "greater": {
+    "prefix": ["greater", "gt"],
+    "body": "▶️"
+  },
+  "smaller": {
+    "prefix": ["smaller", "st"],
+    "body": "◀️"
+  },
+  "equals": {
+    "prefix": ["equals", "eq"],
+    "body": "🙌"
+  },
+  "not": {
+    "prefix": "not",
+    "body": "❎❗️"
+  },
+  "and": {
+    "prefix": "and",
+    "body": "⭕"
+  },
+  "or": {
+    "prefix": "or",
+    "body": "💢"
+  },
+  "xor": {
+    "prefix": "xor",
+    "body": "❌"
+  },
+  "shift-left": {
+    "prefix": "shiftleft",
+    "body": "👈"
+  },
+  "shift-right": {
+    "prefix": "shiftright",
+    "body": "👉"
+  },
+  "abs": {
+    "prefix": "abs",
+    "body": "🏧❗️"
+  },
+  "optional": {
+    "prefix": "optional",
+    "body": "🍬"
+  },
+  "optional-value": {
+    "prefix": "optionalvalue",
+    "body": "🍺"
+  },
+  "null": {
+    "prefix": "null",
+    "body": "🤷‍♀️"
+  },
+  "error": {
+    "prefix": "error",
+    "body": "🚧"
+  },
+  "error-io": {
+    "prefix": "errorio",
+    "body": "🚧🔸↕️"
+  },
+  "throw": {
+    "prefix": "throw",
+    "body": "🚨🆕🚧$0❗️"
+  },
+  "throw-on": {
+    "prefix": "throwon",
+    "body": "🔺"
+  },
+  "try-catch": {
+    "prefix": "trycatch",
+    "body": ["🆗 $1 🍇", "\t$2", "🍉", "🙅 error 🍇", "\t$0", "🍉"]
+  },
+  "file-read": {
+    "prefix": "fileread",
+    "body": "🆕▶️📜 $0"
+  },
+  "file-close": {
+    "prefix": "fileclose",
+    "body": "🚪❗️"
+  },
+  "file-content": {
+    "prefix": "filecontent",
+    "body": "📇"
   }
 }

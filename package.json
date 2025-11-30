@@ -4,10 +4,10 @@
   "description": "Utilities for working with Emojicode programs",
   "version": "0.2.0",
   "icon": "icon.png",
-  "publisher": "CalebDenio",
+  "publisher": "NiliusJulius",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cjdenio/vscode-emojicode.git"
+    "url": "https://github.com/NiliusJulius/vscode-emojicode-extension"
   },
   "engines": {
     "vscode": "^1.102.0"
